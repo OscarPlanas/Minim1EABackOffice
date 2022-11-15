@@ -8,7 +8,9 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { EventScreenComponent } from './components/event-screen/event-screen.component';
 import { UserListComponent } from './components/UserList/userlist.component';
 import { UsersUpdateComponent } from './components/users-update/users-update.component';
-
+import { ConfigUserComponent } from './components/config-user/config-user.component';
+import { ConfigUpdateComponent } from './components/config-update/config-update.component';
+import { ConfigCreateComponent } from './components/config-create/config-create.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +19,9 @@ const routes: Routes = [
   { path: 'event-screen', component: EventScreenComponent },
   { path: 'userlist', component: UserListComponent },
   { path: 'users-update/:_id', component: UsersUpdateComponent },
+  { path: 'config-user', component: ConfigUserComponent },
+  { path: 'config-update/:_id', component: ConfigUpdateComponent },
+  {path: 'config-create', component: ConfigCreateComponent},
 ];
 
 @NgModule({

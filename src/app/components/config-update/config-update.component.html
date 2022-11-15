@@ -1,0 +1,29 @@
+<div class="login-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="padding-bottom: 20px; width: 450px;" class="register" [style]="clickRegister ? 'margin-left: 0vw' : ''">
+        <span class="login-header">Update</span>
+        <label style=" margin-bottom: 20px;">Mode:<input formControlName="name" [ngClass]="{ 'is-invalid': submitted && registerForm.controls.mode.errors }" [style]="submitted && registerForm.controls.mode.errors ? 'outline: 1px solid #b30000;' : ''" type="text" [(ngModel)]="config.mode" ></label>
+        <div *ngIf="submitted && registerForm.controls.mode.errors" class="validation-error">
+            <!--<div *ngIf="registerForm.controls.name.errors.required">Is required</div>-->
+        </div>
+        <div style="width: 62%; display: inline-flex; justify-content: center; margin-bottom: 20px;">
+            <div style="margin-right: 4%; display: flex; flex-direction: column; width: 62%;">
+            <label style="width: 100%;">Font<input [style]="submitted && registerForm.controls.font.errors ? 'outline: 1px solid #b30000;' : ''" formControlName="font" [ngClass]="{ 'is-invalid': submitted && registerForm.controls.font.errors }" type="text" [(ngModel)]="config.font"></label>
+            <div style="width: 100%; margin-top: 3px; margin-bottom: -16.6px; margin-left: 10px;" *ngIf="submitted && registerForm.controls.font.errors" class="validation-error">
+               <!-- <div *ngIf="registerForm.controls.username.errors.required">Is required</div>-->
+            </div>
+            </div>
+            <div style="margin-left: 4%; display: flex; flex-direction: column; width: 62%;">
+            <label style="width: 100%;">Color:<input [style]="submitted && registerForm.controls.color.errors ? 'outline: 1px solid #b30000;' : ''" formControlName="color" [ngClass]="{ 'is-invalid': submitted && registerForm.controls.color.errors }" type="text" [(ngModel)]="config.font"></label>
+            <div style="width: 100%; margin-top: 3px; margin-bottom: -16.6px; margin-left: 10px;" *ngIf="submitted && registerForm.controls.color.errors" class="validation-error">
+               <!-- <div *ngIf="registerForm.controls.username.errors.required">Is required</div>-->
+            </div>
+            </div>
+        </div>
+        <label style=" margin-bottom: 0px;">Background<input [style]="submitted && registerForm.controls.background.errors ? 'outline: 1px solid #b30000;' : ''" formControlName="background" [ngClass]="{ 'is-invalid': submitted && registerForm.controls.background.errors }" type="text" [(ngModel)]="config.background"></label>
+        <div style="width: 100%; margin-top: 3px; margin-bottom: -16.6px; margin-left: 10px;" *ngIf="submitted && registerForm.controls.background.errors" class="validation-error">
+           <!-- <div *ngIf="registerForm.controls.username.errors.required">Is required</div>-->
+        </div>
+        <div style="display: inline-flex; align-items: center; margin-top: 5px;"><input style="width: 16px; margin-right: 10px;" type="radio"> <label style="width: 100%;">He leido y acepto todos los terminos</label></div>
+        <button class="login-button" (click)="updateConfig()"><b>Update</b></button>
+    </form>
+    </div>

@@ -1,0 +1,23 @@
+<div class="create-event-container">
+    <form [formGroup]="createConfigForm" (ngSubmit)="onSubmit()" style="padding-bottom: 20px; width: 450px;" class="create-event" [style]="clickCreateConfig ? 'margin-left: 0vw' : ''">
+        <span class="create-event-header">Create Event</span>
+            <label style=" margin-bottom: 20px;">Mode:<input formControlName="mode" [ngClass]="{ 'is-invalid': submitted && createConfigForm.controls.mode.errors }" [style]="submitted && createConfigForm.controls.mode.errors ? 'outline: 1px solid #b30000;' : ''" type="text" placeholder="Mode" ></label>
+            <div *ngIf="submitted && createConfigForm.controls.mode.errors" class="validation-error">               
+                <div *ngIf="createConfigForm.controls.mode.errors.required">Is required</div>
+            </div>
+            <label style=" margin-bottom: 20px;">Font:<input formControlName="font" [ngClass]="{ 'is-invalid': submitted && createConfigForm.controls.font.errors }" [style]="submitted && createConfigForm.controls.font.errors ? 'outline: 1px solid #b30000;' : ''" type="text" placeholder="Font" ></label>
+            <div *ngIf="submitted && createConfigForm.controls.font.errors" class="validation-error">               
+                <div *ngIf="createConfigForm.controls.font.errors.required">Is required</div>
+            </div>
+            
+        <div style="width: 62%; display: inline-flex; justify-content: center; margin-bottom: 20px;">
+        <div style="margin-right: 4%; display: flex; flex-direction: column; width: 62%;">
+        </div>
+		</div>
+        <button class="create-event-button" (click)="sendCreateConfig()"><b>Create Config</b></button>
+    </form>
+</div>
+
+
+
+   

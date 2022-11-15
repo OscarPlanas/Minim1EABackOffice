@@ -36,6 +36,21 @@ const navOptions = [
         exact: true,
         auth: unAuth()
     },
+    {
+        name: 'Configs',
+        path: '/config-user',
+        icon: '../assets/Config.png',
+        exact: true,
+        auth: unAuth()
+    },
+    {
+        name: 'Create Config',
+        path: '/config-create',
+        icon: '../assets/Config.png',
+        exact: true,
+        auth: unAuth()
+    },
+
 ];
 
 function unAuth(){

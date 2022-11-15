@@ -1,0 +1,32 @@
+<div id="ConfigListForm" class="header">
+    <h2>Configs list</h2>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <td>ID</td>
+        <td>Mode</td>
+        <td>Font</td>
+        <td>Color</td>
+        <td>Background</td>
+        <td>DateOfCreation</td>
+
+    </tr>
+    <tr *ngFor="let ExamConfiguration of listConfigs">
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration._id}}</td>
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration.mode}}</td>
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration.font}}</td>
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration.color}}</td>
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration.background}}</td>
+        <td style="color:rgb(255, 255, 255)">{{ExamConfiguration.datecreation}}</td>
+        <td>
+            <button class="delete-button" (click)="deleteConfig(ExamConfiguration._id!)">
+                Delete config
+            </button>
+            <button class="update-button" (click)="go2UpdateConfig(ExamConfiguration._id!)">
+                Update config
+            </button>
+        </td>
+    </tr>
+</table>
+

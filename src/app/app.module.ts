@@ -13,6 +13,9 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { EventScreenComponent } from './components/event-screen/event-screen.component';
 import { UserListComponent } from './components/UserList/userlist.component';
 import { UsersUpdateComponent } from './components/users-update/users-update.component';
+import { ConfigUserComponent } from './components/config-user/config-user.component';
+import { ConfigUpdateComponent } from './components/config-update/config-update.component';
+import { ConfigCreateComponent } from './components/config-create/config-create.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { UsersUpdateComponent } from './components/users-update/users-update.com
     CreateEventComponent,
     EventScreenComponent,
     UserListComponent,
-    UsersUpdateComponent
+    UsersUpdateComponent,
+    ConfigUserComponent,
+    ConfigUpdateComponent,
+    ConfigCreateComponent
   ],
   imports: [
     BrowserModule,
